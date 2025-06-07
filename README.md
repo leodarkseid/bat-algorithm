@@ -1,4 +1,4 @@
-# 🦇 Bat Algorithm (Yang, 2010)
+# 🦇 Bat Algorithm
 
 This repository provides a Python implementation of the **Bat Algorithm**, a nature-inspired metaheuristic for global optimization problems. Originally introduced by Xin-She Yang in 2010, the algorithm mimics the echolocation behavior of microbats to navigate the search space and find optimal or near-optimal solutions.
 
@@ -19,7 +19,7 @@ The **Bat Algorithm (BA)** is a population-based optimization technique inspired
 
 > **Yang, X.-S. (2010)**. A New Metaheuristic Bat-Inspired Algorithm. In: Nature Inspired Cooperative Strategies for Optimization (NICSO 2010). Studies in Computational Intelligence, vol 284. Springer.
 
-[📄 DOI Link (Springer)](https://doi.org/10.1007/978-3-642-12538-6_6)
+[📄Yang 2010 Link (Springer)](https://doi.org/10.1007/978-3-642-12538-6_6)
 
 ---
 
@@ -62,13 +62,19 @@ Create a virtual env and install requirements.txt with pip
 #### TEST
 To carry out comparative tests, just run 
 
-```python -m test```
+```bash
+python -m test
+```
 
 ### 
 To Run each version of the algorithm run either
 
-```python -m runTawhid```
+```bash
+python -m runTawhid
+```
 
 OR 
 
-```python -m runYang```
+```bash
+python -m runYang
+```
