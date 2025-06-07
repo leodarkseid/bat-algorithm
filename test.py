@@ -7,12 +7,12 @@ from runTawhid import run_tawhid
 from runYang import run_yang
 from yang.main import bat_algorithm_original
 from tawhidDsouza.main import bat_algorithm
-from benchmark.ackley import ackley 
-from benchmark.griewank import griewank
-from benchmark.rastrigin import rastrigin 
-from benchmark.rosenbrock import rosenbrock 
-from benchmark.schwefel import schwefel
-from benchmark.sphere import sphere
+from benchmarks.ackley import ackley 
+from benchmarks.griewank import griewank
+from benchmarks.rastrigin import rastrigin 
+from benchmarks.rosenbrock import rosenbrock 
+from benchmarks.schwefel import schwefel
+from benchmarks.sphere import sphere
 from rich import print as rprint
 from rich.panel import Panel
 from rich.table import Table

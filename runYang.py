@@ -4,12 +4,12 @@ import time
 import questionary
 from tools import safe_ask
 from yang.main import bat_algorithm_original
-from benchmark.ackley import ackley 
-from benchmark.griewank import griewank
-from benchmark.rastrigin import rastrigin 
-from benchmark.rosenbrock import rosenbrock 
-from benchmark.schwefel import schwefel
-from benchmark.sphere import sphere
+from benchmarks.ackley import ackley 
+from benchmarks.griewank import griewank
+from benchmarks.rastrigin import rastrigin 
+from benchmarks.rosenbrock import rosenbrock 
+from benchmarks.schwefel import schwefel
+from benchmarks.sphere import sphere
 
 def run_yang(benchmark, dim, n_bats, n_iter, lb, ub, seed=None, Sol_init=None ):
     if seed is not None:
