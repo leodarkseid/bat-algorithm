@@ -2,6 +2,8 @@
 
 This repository provides a Python implementation of the **Bat Algorithm**, a nature-inspired metaheuristic for global optimization problems. Originally introduced by Xin-She Yang in 2010, the algorithm mimics the echolocation behavior of microbats to navigate the search space and find optimal or near-optimal solutions.
 
+This implementation also includes a variant proposed by **Tawhid and Dsouza (2018)**, which introduces specific parameter settings and enhancements aimed at improving convergence behavior and performance on benchmark problems.
+
 ---
 
 ## 📖 Overview
@@ -11,15 +13,18 @@ The **Bat Algorithm (BA)** is a population-based optimization technique inspired
 **Key features:**
 - Balances exploration and exploitation using loudness and pulse rate
 - Incorporates frequency tuning for diverse search behavior
+- Includes both the original **Yang (2010)** version and the enhanced **Tawhid & Dsouza (2018)** variant
 - Can be applied to both continuous and combinatorial problems
 
 ---
 
-## 📚 Reference
+## 📚 References
 
-> **Yang, X.-S. (2010)**. A New Metaheuristic Bat-Inspired Algorithm. In: Nature Inspired Cooperative Strategies for Optimization (NICSO 2010). Studies in Computational Intelligence, vol 284. Springer.
+> **Yang, X.-S. (2010)**. A New Metaheuristic Bat-Inspired Algorithm. In: *Nature Inspired Cooperative Strategies for Optimization (NICSO 2010)*. Studies in Computational Intelligence, vol 284. Springer.  
+> [📄 Springer Link](https://doi.org/10.1007/978-3-642-12538-6_6)
 
-[📄Yang 2010 Link (Springer)](https://doi.org/10.1007/978-3-642-12538-6_6)
+> **Tawhid, M. A., & Dsouza, K. (2018)**. An Improved Bat Algorithm Based on Directional Echolocation. *International Journal of Applied Metaheuristic Computing (IJAMC), 9*(3), 47–64.  
+> [📄 IGI Global Link](https://doi.org/10.4018/IJAMC.2018070104)
 
 ---
 
@@ -32,7 +37,7 @@ Each bat in the population represents a candidate solution. The core update rule
 3. **Position Update:** New solutions are generated based on velocity and optionally via a local random walk.
 4. **Loudness and Pulse Rate:** Control the probability of accepting new solutions and local search intensity.
 
-These mechanisms help the algorithm converge toward the global optimum while avoiding premature convergence.
+The **Tawhid & Dsouza variant** follows the same fundamental principles but introduces fixed values for loudness and pulse rate (e.g., `A=0.9`, `r=0.5`) and tighter local search strategies for improved convergence.
 
 ---
 
@@ -40,10 +45,12 @@ These mechanisms help the algorithm converge toward the global optimum while avo
 
 - Written in **Python** with **NumPy**
 - Live progress display using the `rich` library
+- Includes both **Yang (2010)** and **Tawhid & Dsouza (2018)** variants
 - Allows for custom objective functions and parameter tuning
 - Modular and easily extensible for benchmarking and experimentation
 
 ---
+
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
