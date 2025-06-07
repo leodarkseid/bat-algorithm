@@ -49,5 +49,5 @@ These mechanisms help the algorithm converge toward the global optimum while avo
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/bat-algorithm.git
+git clone https://github.com/leodarkseid/bat-algorithm.git
 cd bat-algorithm
