@@ -1,7 +1,6 @@
 import sys
 import numpy as np
 import time
-
 import questionary
 from tawhidDsouza.main import bat_algorithm
 from tools import safe_ask
@@ -18,7 +17,7 @@ def run_tawhid(benchmark, dim, n_bats, n_iter, lb, ub, seed=None, Sol_init=None 
     if Sol_init is None:
         Sol_init = np.random.uniform(lb, ub, (n_bats, dim))
     start = time.time()
-    best, fitness = bat_algorithm(
+    best, fitness, original = bat_algorithm(
         obj_func=benchmark,
         Sol_init=Sol_init,
         dim=dim,
@@ -32,7 +31,7 @@ def run_tawhid(benchmark, dim, n_bats, n_iter, lb, ub, seed=None, Sol_init=None 
         ub=ub
     )
     elapsed = time.time() - start
-    return 'Tawhid', best, fitness, elapsed
+    return 'Tawhid', best, fitness, elapsed, original
 
 def safe_ask(q):
     try:

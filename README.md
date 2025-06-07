@@ -51,3 +51,24 @@ These mechanisms help the algorithm converge toward the global optimum while avo
 ```bash
 git clone https://github.com/leodarkseid/bat-algorithm.git
 cd bat-algorithm
+```
+
+### 2. Create Env
+
+Create a virtual env and install requirements.txt with pip
+
+### 3. RUN
+
+#### TEST
+To carry out comparative tests, just run 
+
+```python -m test```
+
+### 
+To Run each version of the algorithm run either
+
+```python -m runTawhid```
+
+OR 
+
+```python -m runYang```

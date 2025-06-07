@@ -17,7 +17,7 @@ def bat_algorithm_original(
     r0=0.5,
     lb=-5.12,
     ub=5.12,
-    update_interval=10
+    update_interval=50
 ):
     """
     Original Bat Algorithm (Yang, 2010) modified to accept initial positions.
@@ -50,6 +50,7 @@ def bat_algorithm_original(
     best_idx = np.argmin(Fitness)
     best = Sol[best_idx].copy()
     best_fitness = Fitness[best_idx]
+    original = best_fitness
 
     A = np.full(n_bats, A0)  # loudness array
     r = np.full(n_bats, r0)  # pulse rate array
@@ -57,15 +58,19 @@ def bat_algorithm_original(
     
         
     progress = Progress(
-        TextColumn("[bold blue]Optimization"),
+        TextColumn("[bold blue]Yang"),
         BarColumn(),
-        TextColumn("Iter: {task.completed}/{task.total}"),
-        TextColumn("• Best: {task.fields[fitness]:.5f}"),
+        TextColumn("⏳ Iter: {task.completed}/{task.total}"),
+        TextColumn("🦇 Bats: {task.fields[bat]}"),
+        TextColumn("• Original Fitness: {task.fields[original]:.5f}"),
+        TextColumn("📐 Dimension: {task.fields[dim]}"),
+        TextColumn("⚡ Best: {task.fields[fitness]:.5f}"),
         TimeElapsedColumn(),
         expand=True
     )
-    
-    task = progress.add_task("Running", total=n_iter, fitness=best_fitness)
+
+
+    task = progress.add_task("Running", total=n_iter, original=original, fitness=best_fitness, dim=dim, bat=n_bats)
 
     with progress:
         for t in range(n_iter):
@@ -102,4 +107,4 @@ def bat_algorithm_original(
                     best_fitness = Fnew
             if t % update_interval == 0 or t == n_iter - 1:
                             progress.update(task, advance=update_interval, fitness=best_fitness)
-    return best, best_fitness
+    return best, best_fitness, original
