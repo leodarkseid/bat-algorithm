@@ -24,7 +24,7 @@ The **Bat Algorithm (BA)** is a population-based optimization technique inspired
 > [📄 Springer Link](https://doi.org/10.1007/978-3-642-12538-6_6)
 
 > **Tawhid, M. A., & Dsouza, K. (2018)**. An Improved Bat Algorithm Based on Directional Echolocation. *International Journal of Applied Metaheuristic Computing (IJAMC), 9*(3), 47–64.  
-> [📄 IGI Global Link](https://doi.org/10.4018/IJAMC.2018070104)
+> [📄 Tawhid Version Link](https://www.emerald.com/insight/content/doi/10.1016/j.aci.2018.04.001/full/html)
 
 ---
 
@@ -37,7 +37,7 @@ Each bat in the population represents a candidate solution. The core update rule
 3. **Position Update:** New solutions are generated based on velocity and optionally via a local random walk.
 4. **Loudness and Pulse Rate:** Control the probability of accepting new solutions and local search intensity.
 
-The **Tawhid & Dsouza variant** follows the same fundamental principles but introduces fixed values for loudness and pulse rate (e.g., `A=0.9`, `r=0.5`) and tighter local search strategies for improved convergence.
+
 
 ---
 
